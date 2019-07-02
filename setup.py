@@ -4,16 +4,13 @@ import os
 import re
 import setuptools
 
-with open(os.path.join(os.path.dirname(__file__), 'kaiterra', '__init__.py')) as f:
-    version = re.search("__version__ = '([^']+)'", f.read()).group(1)
-
 with open('README.rst', 'r') as f:
     readme = f.read()
 
 
 setuptools.setup(
-    name='kaiterra',
-    version=version,
+    name='kaiterra-client',
+    version='0.1',
     description="Kaiterra API Client",
     long_description=readme,
     long_description_content_type="text/x-rst",
