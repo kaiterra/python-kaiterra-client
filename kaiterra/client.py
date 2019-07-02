@@ -182,11 +182,13 @@ class KaiterraAPIClient(object):
 
         return parsed
 
-    def _do_request(self, method, relative_url, *, params={}, headers={}, json=None):
+    def _do_request(self, method, relative_url, *, params=None, headers=None, json=None):
         """
         Executes an HTTP GET/POST against the given resource.  The request is authorized
         using the credentials given to __init__.
         """
+        params = params or {}
+        headers = headers or {}
         if 'key' in params:
             raise ValueError("don't pass the 'key' parameter to individual requests; authorization is already handled by KaiterraAPIClient")
 
