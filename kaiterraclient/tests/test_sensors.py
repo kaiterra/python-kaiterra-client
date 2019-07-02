@@ -4,7 +4,7 @@ import unittest
 import requests
 import requests_mock
 from datetime import datetime, timezone
-from kaiterra import KaiterraAPIClient, Units
+from kaiterraclient import KaiterraAPIClient, Units
 
 
 class TestGetSensorData(unittest.TestCase):
