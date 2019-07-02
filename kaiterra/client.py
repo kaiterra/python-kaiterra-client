@@ -4,9 +4,9 @@ Python client for the Kaiterra REST API.
 
 import json
 import requests
-from kaiterra import dateutil
 from typing import List
 from enum import Enum
+from kaiterraclient import dateutil
 
 
 class AQIStandard(Enum):

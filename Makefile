@@ -1,4 +1,5 @@
 setup:
+	python3 -m pip install --user --upgrade setuptools wheel
 	python3 -m pip install --user zest.releaser[recommended]
 
 	@if [ ! -f ~/.pypirc ]; then \
@@ -11,4 +12,4 @@ install-editable:
 	pip install -e .
 
 test:
-	python setup.py test
+	python3 setup.py test
