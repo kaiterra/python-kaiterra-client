@@ -65,7 +65,7 @@ class KaiterraAPIClient(object):
                  base_url='https://api.kaiterra.cn',
                  api_key=None,
                  hmac_secret=None,
-                 aqi_standard=AQIStandard.USA,
+                 aqi_standard=None,
                  preferred_units=None,
                  ):
         """Constructs a new KaiterraAPIClient object."""
@@ -73,6 +73,7 @@ class KaiterraAPIClient(object):
         self._api_key = api_key
         self._hmac_secret = hmac_secret
         self._preferred_units = []
+        self._aqi_standard = aqi_standard
 
         if preferred_units is not None:
             for u in preferred_units:
@@ -128,6 +129,8 @@ class KaiterraAPIClient(object):
         requests = []
 
         get_params = ['format=series_major']
+        if self._aqi_standard is not None:
+            get_params.append('aqi=' + self._aqi_standard.value)
         for u in self._preferred_units:
             get_params.append('units=' + u.value)
 
@@ -173,10 +176,10 @@ class KaiterraAPIClient(object):
             point['ts'] = dateutil.parse_rfc3339(point['ts'])
             new_pt = {
                 'units': Units.from_str(param['units']),
-                'points': [point]
             }
             if 'source' in param:
                 new_pt['source'] = param['source']
+            new_pt['points'] = [point]
 
             parsed[param['param']] = new_pt
 
