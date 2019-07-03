@@ -17,7 +17,7 @@ setuptools.setup(
     url='https://github.com/kaiterra/api-python',
     license='MIT License',
     packages=setuptools.find_packages(exclude=['tests']),
-    test_suite='kaiterraclient.tests',
+    test_suite='kaiterra_client.tests',
     tests_require=[
         'requests-mock',
     ],

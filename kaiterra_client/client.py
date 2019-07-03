@@ -6,7 +6,7 @@ import json
 import requests
 from typing import List
 from enum import Enum
-from kaiterraclient import dateutil
+from kaiterra_client import dateutil
 
 
 class AQIStandard(Enum):

@@ -2,8 +2,8 @@
 
 import os
 import unittest
-from kaiterraclient.tests import skip_online_tests
-from kaiterraclient import KaiterraAPIClient, Units
+from kaiterra_client.tests import skip_online_tests
+from kaiterra_client import KaiterraAPIClient, Units
 
 @skip_online_tests
 class GetSensorDataTests(unittest.TestCase):
