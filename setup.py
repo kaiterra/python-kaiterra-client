@@ -9,8 +9,8 @@ with open('README.rst', 'r') as f:
 
 
 setuptools.setup(
-    name='kaiterra-client-kaiterramike',
-    version='0.2a6',
+    name='kaiterra-client',
+    version='0.0.1',
     description="Kaiterra API Client",
     long_description=readme,
     long_description_content_type="text/x-rst",
