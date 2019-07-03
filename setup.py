@@ -22,7 +22,8 @@ setuptools.setup(
         'requests-mock',
     ],
     install_requires=[
-        'requests',
+        # Require new ISRG root certificates
+        'requests>=2.16.0',
     ],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
