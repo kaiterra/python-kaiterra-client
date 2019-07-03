@@ -25,6 +25,9 @@ setuptools.setup(
         # Require new ISRG root certificates
         'requests>=2.16.0',
     ],
+    # Uses enums (3.4) and type hints (3.5), though reducing this to >=3.4
+    # by importing the typing package is a possibility
+    python_requires='>=3.5',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
