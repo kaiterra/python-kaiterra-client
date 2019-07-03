@@ -1,4 +1,4 @@
-python-kaiterraclient
+python-kaiterra-client
 ==========================
 
 Python 3 client for retrieving readings from your Laser Egg or Sensedge using the `Kaiterra REST API <https://www.kaiterra.com/dev>`__.
@@ -13,7 +13,7 @@ Install the library using pip:
 
 .. code:: bash
 
-	pip install kaiterraclient
+	pip install kaiterra-client
 
 Example
 -------------
@@ -22,7 +22,7 @@ Here's some code to retrieve readings from a couple test devices, one Laser Egg 
 
 .. code:: python
 
-	from kaiterraclient import KaiterraAPIClient
+	from kaiterra_client import KaiterraAPIClient
 
 	client = KaiterraAPIClient(api_key='YOUR_API_KEY_HERE')
 
@@ -30,11 +30,11 @@ Here's some code to retrieve readings from a couple test devices, one Laser Egg 
 		'/lasereggs/00000000-0001-0001-0000-00007e57c0de',
 		'/sensedges/00000000-0031-0001-0000-00007e57c0de',
 	])
-	
+
 	print(r)
 
 
 Development
 -------------
 
-Source code, issues, and pull requests are managed using `Github <https://github.com/kaiterra/python-kaiterraclient>`__.
+Source code, issues, and pull requests are managed using `Github <https://github.com/kaiterra/python-kaiterra-client>`__.
